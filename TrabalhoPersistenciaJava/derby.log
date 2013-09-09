@@ -1,0 +1,72 @@
+----------------------------------------------------------------
+Mon Sep 09 19:01:48 BRT 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0141-04be-b1b8-0000025fa7f8 
+on database directory C:\eclipse42\TrabalhoPersistenciaJava\simpleDb  with class loader sun.misc.Launcher$AppClassLoader@2cf5006 
+Loaded from file:/C:/Users/Perfil/.m2/repository/org/apache/derby/derby/10.8.2.2/derby-10.8.2.2.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_11-b21
+user.dir=C:\eclipse42\TrabalhoPersistenciaJava
+derby.system.home=null
+WARNING: Log file not found, creating new log. Possible inconsistency in the database
+Database Class Loader started - derby.database.classpath=''
+Mon Sep 09 19:01:49 BRT 2013 Thread[main,5,main] (XID = 7), (SESSIONID = 1), (DATABASE = simpleDB), (DRDAID = null), Cleanup action starting
+Mon Sep 09 19:01:49 BRT 2013 Thread[main,5,main] (XID = 7), (SESSIONID = 1), (DATABASE = simpleDB), (DRDAID = null), Failed Statement is: null
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.apache.derby.impl.sql.GenericParameterValueSet.initialize(Unknown Source)
+	at org.apache.derby.impl.sql.execute.BaseActivation.setupActivation(Unknown Source)
+	at org.apache.derby.impl.sql.GenericActivationHolder.<init>(Unknown Source)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.getActivation(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement20.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.newEmbedPreparedStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.prepareMetaDataStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.prepareSPS(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getPreparedQueryUsingSystemTables(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getPreparedQuery(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getPreparedQuery(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getTypeInfoMinion(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedDatabaseMetaData.getTypeInfo(Unknown Source)
+	at org.hibernate.engine.jdbc.internal.TypeInfoExtracter.extractTypeInfo(TypeInfoExtracter.java:58)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:146)
+	at org.hibernate.service.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:75)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:159)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:131)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:71)
+	at org.hibernate.cfg.Configuration.buildSettingsInternal(Configuration.java:2270)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2266)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1735)
+	at org.hibernate.ejb.EntityManagerFactoryImpl.<init>(EntityManagerFactoryImpl.java:84)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:889)
+	at org.hibernate.ejb.HibernatePersistence.createEntityManagerFactory(HibernatePersistence.java:56)
+	at javax.persistence.Persistence.createEntityManagerFactory(Unknown Source)
+	at javax.persistence.Persistence.createEntityManagerFactory(Unknown Source)
+	at br.com.fiap.trabalho.dao.jpa.JPAConnection.getEntityManager(JPAConnection.java:13)
+	at br.com.fiap.trabalho.dao.jpa.JPAMovieDao.createMovie(JPAMovieDao.java:13)
+	at br.com.fiap.trabalho.test.TestJPAMovieDao.init(TestJPAMovieDao.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+Cleanup action completed
